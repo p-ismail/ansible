@@ -3,7 +3,7 @@
   become: yes # it means root user access
   tasks:
   - name : install and run the nginx  
-    ansible.builtin.pacakage:
+    ansible.builtin.package:
       name: nginx
       state: present
 
