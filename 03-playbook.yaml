@@ -1,9 +1,15 @@
-- name: install nginx
-  hosts: web
+- name: install nginx and run the nginx
+  hosts: web #tageting the we server present in the inventory
   become: yes # it means root user access
   tasks:
-  - name : install and run the nginx  
+  - name : install the nginx  
     ansible.builtin.package:
       name: nginx
       state: present
+
+  - name : run the nginx
+    ansible.builtin.service:
+     name: nginx
+     state: started
+     enabled: yes
 
