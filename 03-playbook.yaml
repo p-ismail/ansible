@@ -1,0 +1,9 @@
+- name: install nginx
+  hosts: web
+  become: yes # it means root user access
+  tasks:
+  - name : install and run the nginx  
+    ansible.builtin.pacakage:
+      name: nginx
+      state: present
+
