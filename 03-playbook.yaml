@@ -1,5 +1,5 @@
-- name: install nginx and run the nginx
-  hosts: web #tageting the we server present in the inventory
+- name: install and run the nginx
+  hosts: web #tageting the web server present in the inventory
   become: yes # it means root user access
   tasks:
   - name : install the nginx  
