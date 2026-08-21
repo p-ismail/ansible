@@ -1,0 +1,24 @@
+- name: print the datatypes
+  hosts: local
+  connection: local
+  vars:
+    PROGRAM: "Devops with AWS" #string
+    DURATION: 140hrs #int/number
+    IS_LIVE: true #bool
+    DETAILS: #map/dictorenty {}
+      TRAINER: "ISMAIL"
+      MONTHS: 4
+    TOPICS: #list -/[]
+    - linux
+    - shell
+    - Ansible
+  tasks:
+  - name: print the variables
+    ansible.builtin.debug:
+      msg: |
+        program: {{ PROGRAM }}
+        Duration: {{ DURATION }}
+        Is Live?: {{ IS_LIVE }}
+        Details: {{ DETAILS }}
+        Topics: {{ TOPICS }}
+
