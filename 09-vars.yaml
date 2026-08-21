@@ -10,7 +10,7 @@
     prompt: Please enter the name
     private: false
   tasks:
-  - name: print the variables
+  - name: print the name
     vars:
       NAME: "Ansible from tasks"
       ansible.builtin.debug:
