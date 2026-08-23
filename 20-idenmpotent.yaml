@@ -1,0 +1,8 @@
+- name: check the idenmpotent
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: create the user
+    ansible.builtin.user:
+     name: ismail
